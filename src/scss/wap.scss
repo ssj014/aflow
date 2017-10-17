@@ -1,0 +1,513 @@
+@import "lib-base.scss";
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0px auto;
+    background: $green url(../images/body01.png) no-repeat;
+    background-size: 100%;
+}
+
+.main {
+    overflow: hidden;
+    padding: 640px 0 50px 0;
+    .agg-list {
+        &:not(:last-child) {
+            padding-bottom: 20px;
+        }
+        .agg-title {
+            background: url("../images/t_bg01.png") no-repeat;
+            width: 302px;
+            height: 62px;
+            margin: 0 auto;
+            background-size: 302px 62px;
+            font-size: 25px;
+            text-align: center;
+            padding-top: 20px;
+            color: $org;
+        }
+        .agg-title02 {
+            background: url("../images/t_bg02.png") no-repeat;
+            width: 323px;
+            height: 66px;
+            background-size: 323px 66px;
+        }
+        .agg-title03 {
+            background: url("../images/t_bg03.png") no-repeat;
+            width: 347px;
+            height: 70px;
+            background-size: 347px 70px;
+        }
+        .agg-con {
+            background-color: $lorg;
+            box-shadow: 0 12px 0 $zs03;
+            border-radius: 15px;
+            width: 524px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px 15px 18px 15px;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+            .agg-tip {
+                display: inline-block;
+                color: $white;
+                border-radius: 50px;
+                background-color: $zs04;
+                padding: 0 25px;
+                box-shadow: inset 2px 5px 5px $zs05;
+                margin-left: 5px;
+            }
+            .agg-btn {
+                display: block;
+                background: url("../images/btnLink.png") no-repeat;
+                width: 185px;
+                height: 49px;
+                line-height: 49px;
+                background-size: 185px 49px;
+                margin: 10px auto 0 auto;
+                font-size: 24px;
+            }
+            .tu-icon01 {
+                display: block;
+                position: absolute;
+                top: 112px;
+                right: 44px;
+                background: url("../images/tu_icon01.png") no-repeat;
+                width: 50px;
+                height: 27px;
+                background-size: 50px 27px;
+            }
+        }
+        .agg-con02 {
+            .tu-icon01 {
+                background: url("../images/t_icon02.png") no-repeat;
+                width: 105px;
+                height: 133px;
+                top: 83px;
+                left: 8px;
+                background-size: 105px 133px;
+            }
+            .agg-tip {
+                background-color: $zs06;
+                box-shadow: inherit;
+                border-radius: 0;
+            }
+        }
+        .agg-con03 {
+            padding: 10px 0 18px 0;
+        }
+        .gz-link {
+            background-color: $white;
+            border-radius: 50px;
+            padding: 2px 8px;
+            font-size: 16px;
+            position: absolute;
+            top: 128px;
+            right: 62px;
+        }
+        .check-list {
+            padding: 15px 5px 0 15px;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+            .radio-txt {
+                background-color: $zs07;
+                color: $white;
+                float: left;
+                padding: 0 3px;
+                min-width: 115px;
+            }
+        }
+        .agg-con04 {
+            padding: 10px 0 30px 0;
+            .agg-btn {
+                position: absolute;
+                top: 150px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-left: 10px;
+            }
+            .gz-link {
+                top: 180px;
+                right: 56px;
+            }
+            .tu-icon01 {
+                background: url("../images/t_icon03.png") no-repeat;
+                width: 50px;
+                height: 48px;
+                background-size: 50px 48px;
+                top: 174px;
+                right: 0;
+            }
+        }
+        .agg-tip02 {
+            background-color: $zs06;
+            box-shadow: inherit;
+            border-radius: 0;
+            color: $white;
+            max-width: 190px;
+            margin: 0 auto;
+        }
+        .agg-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            .flow-list {
+                display: flex;
+                align-items: center;
+                &:nth-child(1) {
+                    p {
+                        font-size: 18px;
+                        background-color: $zs09;
+                        color: $white;
+                        padding: 9px 10px;
+                    }
+                    &:after {
+                        content: '=';
+                        width: 20px;
+                        height: 20px;
+                        color: $lorg;
+                        line-height: 0.9em;
+                        font-size: 20px;
+                        background-color: $zs07;
+                        border-radius: 50%;
+                    }
+                }
+                &:nth-child(n+2) {
+                    p {
+                        font-size: 14px;
+                        background-color: $zs07;
+                        color: $lorg;
+                        padding: 0 10px 5px 10px;
+                    }
+                    &:not(:last-child) {
+                        &:after {
+                            content: '+';
+                            width: 20px;
+                            height: 20px;
+                            color: $lorg;
+                            line-height: 0.9em;
+                            font-size: 18px;
+                            background-color: $zs07;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                p {
+                    line-height: 1.2em;
+                    border-radius: 5px;
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .agg-con05 {
+            color: $zs07;
+            font-size: 28px;
+            text-align: left;
+            padding: 20px 15px;
+            .agg-btn {
+                text-align: center;
+                position: absolute;
+                top: 95px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .tu-icon03 {
+                background: url("../images/t_icon04.png") no-repeat;
+                width: 95px;
+                height: 57px;
+                background-size: 95px 57px;
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 178px;
+            }
+            .tu-icon04 {
+                background: url("../images/t_icon05.png") no-repeat;
+                width: 148px;
+                height: 110px;
+                background-size: 148px 110px;
+                display: block;
+                position: absolute;
+                top: 36px;
+                right: 5px;
+            }
+        }
+        .agg-con06 {
+            color: $zs10;
+            font-size: 28px;
+            .agg-tip {
+                background-color: $zs06;
+                box-shadow: inherit;
+                border-radius: 0;
+                padding: 5px 15px 0 15px;
+                font-size: 28px;
+            }
+            .tu-icon05 {
+                background: url("../images/t_bg04.png") no-repeat;
+                width: 123px;
+                height: 113px;
+                background-size: 123px 113px;
+                display: block;
+                position: absolute;
+                top: 64px;
+                left: 2px;
+            }
+            .tu-icon06 {
+                background: url("../images/t_bg05.png") no-repeat;
+                width: 84px;
+                height: 128px;
+                background-size: 84px 128px;
+                display: block;
+                position: absolute;
+                top: 64px;
+                right: 38px;
+            }
+            .agg-con06-list {
+                display: flex;
+                justify-content: space-around;
+                padding: 5px 0;
+                li {
+                    background-color: $zs06;
+                    color: $white;
+                    font-size: 18px;
+                    line-height: 1.3em;
+                    padding: 0 20px;
+                    &:nth-child(2) {
+                        line-height: 2.5em;
+                    }
+                }
+            }
+        }
+        .con07-list {
+            font-size: 28px;
+            p {
+                &:not(:last-child) {
+                    padding-bottom: 5px;
+                }
+                span {
+                    &:nth-child(1) {
+                        color: $zs11;
+                        &:after {
+                            content: '+';
+                            color: $zs11;
+                        }
+                    }
+                    &:nth-child(2) {
+                        background-color: $zs06;
+                        color: $white;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.silder-fixed {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    .silder-list {
+        background: url("../images/silder.png") no-repeat;
+        width: 121px;
+        height: 351px;
+        background-size: 121px 351px;
+        position: relative;
+        li {
+            a {
+                text-indent: -9999px;
+                display: block;
+                width: 121px;
+                height: 47px;
+                position: absolute;
+                &.silder01 {
+                    top: 40px;
+                    left: 0;
+                }
+                &.silder02 {
+                    top: 90px;
+                    left: 0;
+                }
+                &.silder03 {
+                    top: 142px;
+                    left: 0;
+                }
+                &.silder04 {
+                    top: 195px;
+                    left: 0;
+                }
+                &.silder05 {
+                    top: 250px;
+                    left: 0;
+                }
+                &.silder06 {
+                    top: 305px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.gz-modal {
+    position: relative;
+    z-index: 9999;
+    .modal-close {
+        background: url("../images/close.png") no-repeat;
+        width: 29px;
+        height: 28px;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .modal-body {
+        img {
+            width: 315px;
+            height: 297px;
+            position: absolute;
+            left: 10px;
+            top: -60px;
+        }
+    }
+}
+
+.gz-modal02 {
+    .modal-body {
+        img {
+            top: -105px;
+        }
+    }
+}
+
+.gz-modal03 {
+    .modal-body {
+        img {
+            width: 268px;
+            height: 330px;
+            left: 10px;
+            top: -150px;
+        }
+    }
+}
+
+.gz-gobal {
+    .modal-header {
+        background-color: #a5a5a6;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px 20px 0 0;
+        font-size: 28px;
+        color: $white;
+    }
+    .modal-close {
+        background: url("../images/close02.png") no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        top: -10px;
+        right: -10px;
+    }
+    .modal-content {
+        padding: 0;
+    }
+    .modal-body {
+        text-align: center;
+        padding: 20px 20px 40px 20px;
+        font-size: 24px;
+        background: url("../images/tu04.png") no-repeat bottom right;
+        background-size: 91px 90px;
+        p {
+            &:not(:last-child) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .modal-icon {
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/tu03.png") no-repeat;
+            width: 48px;
+            height: 29px;
+            background-size: contain;
+            margin: -2px 10px 0 0;
+        }
+    }
+}
+
+.gz-modal05 {
+    .modal-body {
+        padding-bottom: 0;
+    }
+    .modal-icon {
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/tu05.png") no-repeat;
+            width: 40px;
+            height: 60px;
+            background-size: contain;
+            margin: -2px 10px 0 0;
+        }
+    }
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px 40px 50px;
+}
+
+.btn-org {
+    flex: 1;
+    background-color: $lorg;
+    box-shadow: 0 12px 0 $zs03;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 32px;
+    color: $zs04;
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.gz-modal06 {
+    .modal-body {
+        padding-bottom: 0;
+    }
+    .modal-icon {
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/tu06.png") no-repeat;
+            width: 81px;
+            height: 64px;
+            background-size: contain;
+            margin: -2px 10px 0 0;
+        }
+    }
+}
+
+.btn-gray {
+    display: block;
+    background: url("../images/btnLink_gray.png") no-repeat;
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+    background-size: 185px 49px;
+    margin: 10px auto 0 auto;
+    font-size: 24px;
+}

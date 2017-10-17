@@ -1,0 +1,284 @@
+@import "lib-var.scss";
+* {
+    margin: 0px;
+    padding: 0px;
+    word-wrap: break-word;
+    word-break: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: $white;
+    color: $black;
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, PingFang SC, Helvetica Neue, STHeiti, Microsoft Yahei, Tahoma, Simsun, sans-serif;
+    /*no*/
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+input,
+select,
+button,
+textarea {
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    background: none;
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: $link;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt45 {
+    padding-top: 45px;
+}
+
+.pl50 {
+    padding-left: 50px;
+}
+
+.pr8 {
+    padding-right: 8px;
+}
+
+.ml200 {
+    margin-left: 200px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.font-zs01 {
+    color: $zs01;
+}
+
+.font-zs02 {
+    color: $zs02;
+}
+
+.font-org {
+    color: $lorg;
+}
+
+.font-red {
+    color: $red;
+}
+
+.font-red02 {
+    color: $zs10;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f32 {
+    font-size: 32px;
+}
+
+.f36 {
+    font-size: 36px;
+}
+
+.f46 {
+    font-size: 46px;
+}
+
+
+/*单选*/
+
+.radio {
+    font-size: 20px;
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        &+.radio-label {
+            &:before {
+                content: '';
+                background: $zs08;
+                border-radius: 100%;
+                border: 4px solid $zs07;
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: relative;
+                top: 2px;
+                margin-right: 12px;
+                cursor: pointer;
+                float: left;
+                transition: all 250ms ease;
+            }
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    input[type="radio"]:checked {
+        &+.radio-label {
+            &:before {
+                background-color: $zs07;
+                box-shadow: inset 0 0 0 5px $zs08;
+            }
+        }
+    }
+    input[type="radio"]:focus {
+        &+.radio-label {
+            &:before {
+                outline: none;
+                border-color: $zs07;
+            }
+        }
+    }
+    input[type="radio"]:disabled {
+        &+.radio-label {
+            &:before {
+                box-shadow: inset 0 0 0 8px $zs07;
+                border-color: $zs07;
+                background-color: $zs08;
+            }
+        }
+    }
+}
+
+
+/*弹框*/
+
+
+/*通用弹出层*/
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.modal-backdrop.in {
+    display: block;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal.on {
+    display: block;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    max-width: 640px;
+    margin: 30% auto 0 auto;
+}
+
+.modal-content {
+    margin: 0 20px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.modal-header {
+    position: relative;
+}
+
+@mixin clearfix {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,32 @@
+@import "lib-base.scss";
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gulp_img {
+    width: 100%;
+}
+
+.case {
+    padding: 80px 40px;
+    background-color: black;
+    text-align: center;
+    font-size: 32px;
+    @include clearfix;
+    min-height: 100vh;
+    h4 {
+        font-size: 50px;
+        color: orange;
+        padding-bottom: 60px;
+    }
+    p {
+        padding-top: 10px;
+        color: green;
+        writing-mode: tb-rl;
+        letter-spacing: 10px;
+        float: left;
+        width: 80px;
+        text-shadow: 2px 2px 3px red;
+    }
+}
